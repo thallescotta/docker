@@ -76,7 +76,14 @@ https://cursos.alura.com.br/course/docker-criando-gerenciando-containers/task/10
 ```docker port xxxxxxx``` // xxxx sendo o id do dockersamples baixado
 mostrando as portas mapeadas do container, dentro do ```localhost:yyyy``` sendo yyy o numero da porta 80/tcp -> :::yyyy
 
-## >>> ```docker run -d -p 8080:80 dockersamples/static-site``` // -p minusculo, essa flag  especifica que que a porta 8080 do container -> 80 do localhost
+## >> Ou então >> se matarmos o container com: ```docker rm xxxxxxxxx --force```
+Com o comando acima, voce mata o container e conteudo e abaixo será possivel especificar qual porta do containter, voce quer mapear e dar mais detalhes deste mapeamento.
+
+## >>> ```docker run -d -p 8080:80 dockersamples/static-site``` // -p minusculo, essa flag  especifica que que a porta 8080 do container -> [deve refletir] a porta 80 do localhost.
+Com isso valida-se o isolamento da aplicação do container.
+
+
+```docker port``` //comando responsável pela visualização de como o mapeamento de portas de um container está sendo feito.
 
 
 

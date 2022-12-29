@@ -1,20 +1,15 @@
 # DEVOPS CONTAINERS ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
 ## Docker: Criando e gerenciado containers
-
 https://cursos.alura.com.br/course/docker-criando-gerenciando-containers
 
-
-
+## 02 Os primeiros comandos:
 
 https://hub.docker.com/ Repositorio Docker com imagens pre-prontas (selo de imagem oficial)
 
 https://docs.docker.com/engine/reference/commandline/cli/  Use the Docker command line docker
 
-
 ```docker run --help```
-
-
 
 ```docker pull ubuntu``` //baixa, extrai a imagem e não executa
 
@@ -82,14 +77,31 @@ Com o comando acima, voce mata o container e conteudo e abaixo será possivel es
 ## >>> ```docker run -d -p 8080:80 dockersamples/static-site``` // -p minusculo, essa flag  especifica que que a porta 8080 do container -> [deve refletir] a porta 80 do localhost.
 Com isso valida-se o isolamento da aplicação do container.
 
-
 ```docker port``` //comando responsável pela visualização de como o mapeamento de portas de um container está sendo feito.
 
 
 
+# 03 Entendendo imagens
+https://cursos.alura.com.br/course/docker-criando-gerenciando-containers/task/100392
+
+
+```docker images``` ou ```docker images ls```  //lista as imagens baixadas
+
+
+## Criando e compreendendo imagens:
+
+- Imagens são imutáveis, ou seja, depois de baixadas, múltiplos containers conseguirão reutilizar a mesma imagem;
+- Imagens são compostas por uma ou mais camadas. Dessa forma, diferentes imagens são capazes de reutilizar uma ou mais camadas em comum entre si;
+- Podemos criar nossas imagens através de Dockerfiles e do comando ```docker build```;
+- Para subir uma imagem no Docker Hub, utilizamos o comando ```docker push```.
 
 
 
+## 04 Persistindo dados:
+https://cursos.alura.com.br/course/docker-criando-gerenciando-containers/task/100604
 
-
-
+Quando containers são removidos, nossos dados são perdidos;
+- Podemos persistir dados em definitivo através de volumes e bind mounts;
+- Bind mounts dependem da estrutura de pastas do host;
+- Volumes são gerenciados pelo Docker;
+- Tmpfs armazenam dados em memória volátil

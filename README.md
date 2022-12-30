@@ -105,3 +105,21 @@ Quando containers são removidos, nossos dados são perdidos;
 - Bind mounts dependem da estrutura de pastas do host;
 - Volumes são gerenciados pelo Docker;
 - Tmpfs armazenam dados em memória volátil
+
+
+
+## 05 Comunicação através de redes:
+```docker inspect idxxxxx``` //
+
+
+
+Nessa aula aprendemos:
+
+- O docker dispõe por padrão de três redes: bridge, host e none;
+- A rede bridge é usada para comunicar containers em um mesmo host;
+- Redes bridges criadas manualmente permitem comunicação via hostname;
+- A rede host remove o isolamento de rede entre o container e o host;
+- A rede none remove a interface de rede do container;
+- Podemos criar redes com o comando ```docker network create```.
+
+
